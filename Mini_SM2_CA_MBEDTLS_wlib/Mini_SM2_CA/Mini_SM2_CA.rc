@@ -1,0 +1,247 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Mini_SM2_CA.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Mini_SM2_CA.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Mini_SM2_CA"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Mini_SM2_CA 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_MINI_SM2_CA_DIALOG DIALOGEX 0, 0, 369, 232
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "CVM MiniCA(SM2版)"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_ND,55,15,300,15,ES_AUTOHSCROLL
+    GROUPBOX        "输入信息",IDC_STATIC,10,5,350,50
+    EDITTEXT        IDC_EDIT_CER,20,70,335,90,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+    GROUPBOX        "P10或Cert",IDC_STATIC,10,60,350,105
+    PUSHBUTTON      "产生根证书",IDC_BUTTON_GENROOTCER,187,172,76,17
+    PUSHBUTTON      "产生用户证书",IDC_BUTTON_GENUSERCER,187,192,76,17
+    PUSHBUTTON      "导入用户证书",IDC_BUTTON_IMPORTCERT,273,192,76,17
+    PUSHBUTTON      "产生用户P10",IDC_BUTTON_GENUSERP10,101,192,76,17
+    PUSHBUTTON      "验证P10",IDC_BUTTON_VERIFYP10,273,172,76,17
+    GROUPBOX        "",IDC_STATIC,10,165,350,50
+    PUSHBUTTON      "产生根证书密钥对",IDC_BUTTON_GENROOTKEY,15,172,76,17
+    PUSHBUTTON      "产生根证书P10",IDC_BUTTON_GENROOTP10,101,172,76,17
+    RTEXT           "使用者：",IDC_STATIC,15,15,40,15,SS_CENTERIMAGE
+    RTEXT           "序列号：",IDC_STATIC,15,35,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_SERIAL,55,35,100,15,ES_AUTOHSCROLL
+    CTEXT           "有效期从",IDC_STATIC,165,35,40,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NOTBEFOR,205,35,65,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NOTAFTER,290,35,65,15,ES_AUTOHSCROLL
+    CTEXT           "到",IDC_STATIC,270,35,20,15,SS_CENTERIMAGE
+    CONTROL         "根证书模式",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,215,80,12
+    CONTROL         "基于P10生成证书",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,101,215,80,12
+    PUSHBUTTON      "产生用户密钥对",IDC_BUTTON_GENUSERKEY,15,192,76,17
+    CONTROL         "用户密钥对已生成",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,188,215,83,12
+END
+
+IDD_PW_DIALOG DIALOGEX 0, 0, 316, 85
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "请输入用户PIN"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PW,61,15,246,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "认证",IDOK,72,58,50,14
+    PUSHBUTTON      "取消",IDCANCEL,193,57,50,14
+    CTEXT           "PIN值：",IDC_STATIC,7,17,48,8
+    CTEXT           "请注意输入时候的字符大小写",IDC_STATIC_INFO,7,40,302,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "武汉珞珈新世纪信息有限公司"
+            VALUE "FileDescription", "珈云CA"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Mini_SM2_CA.exe"
+            VALUE "LegalCopyright", "武汉珞珈新世纪信息有限公司。保留所有权利。"
+            VALUE "OriginalFilename", "Mini_SM2_CA.exe"
+            VALUE "ProductName", "珈云CA"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MINI_SM2_CA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 360
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_PW_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 78
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MINI_SM2_CA_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 Mini_SM2_CA(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Mini_SM2_CA.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
